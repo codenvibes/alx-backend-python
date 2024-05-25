@@ -45,7 +45,7 @@ $ python -m unittest path/to/test_file.py
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/2ueVPK1kWZuz525FvZ1v2Q">How to mock a readonly property with mock?</a></b></summary><br>
+<summary><b><a href="https://stackoverflow.com/questions/11836436/how-to-mock-a-readonly-property-with-mock">How to mock a readonly property with mock?</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
