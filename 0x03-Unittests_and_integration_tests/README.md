@@ -37,7 +37,7 @@ $ python -m unittest path/to/test_file.py
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/PKetnACd7FfRiU8_kpe5EA">unittest.mock — mock object library</a></b></summary><br>
+<summary><b><a href="https://docs.python.org/3/library/unittest.mock.html">unittest.mock — mock object library</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
