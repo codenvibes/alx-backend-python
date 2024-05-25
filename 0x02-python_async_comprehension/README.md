@@ -31,7 +31,7 @@
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/l4Fnno568VbVIn9GvrFVtQ">Type-hints for generators</a></b></summary><br>
+<summary><b><a href="https://stackoverflow.com/questions/42531143/how-to-type-hint-a-generator-in-python-3">Type-hints for generators</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
