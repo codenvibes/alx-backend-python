@@ -5,6 +5,8 @@
 <details>
 <summary><b><a href="https://intranet.alxswe.com/rltoken/5j0OtdWh36_HVAHKJX2gaA">Advanced Python</a></b></summary><br>
 
+<div align="center"><img alt="" src="https://github.com/codenvibes/alx-backend-python/blob/master/0x00-python_variable_annotations/images/y9y25tefi5401.png"></div>
+
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
