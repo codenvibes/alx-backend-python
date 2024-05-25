@@ -2,7 +2,7 @@
 <div align="center"><code>Python</code> <code>Back-end</code></div>
 
 <br>
-<div align="center" width="50%"><img alt="" src="https://github.com/codenvibes/alx-backend-python/blob/master/0x02-python_async_comprehension/images/ee85b9f67c384e29525b.png"></div>
+<div align="center"><img alt="" width="50%" src="https://github.com/codenvibes/alx-backend-python/blob/master/0x02-python_async_comprehension/images/ee85b9f67c384e29525b.png"></div>
 
 <!-- <br>
 <hr>
