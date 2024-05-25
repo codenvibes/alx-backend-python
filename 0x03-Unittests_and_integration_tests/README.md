@@ -89,9 +89,6 @@ $ python -m unittest path/to/test_file.py
 </details>
 
 
-
-<br>
-
 <!--==================================================-->
 <br>
 
