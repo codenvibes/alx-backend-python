@@ -29,7 +29,7 @@ $ python -m unittest path/to/test_file.py
 
 ## Resources
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/a_AEObGK8jeqPtTPmm-gIA">unittest — Unit testing framework</a></b></summary><br>
+<summary><b><a href="https://docs.python.org/3/library/unittest.html">unittest — Unit testing framework</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
