@@ -15,7 +15,7 @@
 
 ## Resources
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/hlwtED-iLsdORSgly8DsyQ">PEP 530 – Asynchronous Comprehensions</a></b></summary><br>
+<summary><b><a href="https://peps.python.org/pep-0530/">PEP 530 – Asynchronous Comprehensions</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
