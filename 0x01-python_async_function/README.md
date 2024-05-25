@@ -23,7 +23,7 @@
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/aZUO4GiWHbPIrVBIwptFAw">asyncio - Asynchronous I/O</a></b></summary><br>
+<summary><b><a href="https://docs.python.org/3/library/asyncio.html">asyncio - Asynchronous I/O</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
