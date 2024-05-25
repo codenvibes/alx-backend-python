@@ -61,7 +61,7 @@ $ python -m unittest path/to/test_file.py
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/x83Hdr54q4Vax5xQ2Z3HSA">Memoization</a></b></summary><br>
+<summary><b><a href="https://pypi.org/project/parameterized/">Memoization</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
