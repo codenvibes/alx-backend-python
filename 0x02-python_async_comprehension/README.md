@@ -23,7 +23,7 @@
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/0OkbObYzCKtO7ZUAxfKvkw">What’s New in Python: Asynchronous Comprehensions / Generators</a></b></summary><br>
+<summary><b><a href="https://www.blog.pythonlibrary.org/2017/02/14/whats-new-in-python-asynchronous-comprehensions-generators/">What’s New in Python: Asynchronous Comprehensions / Generators</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
