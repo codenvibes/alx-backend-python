@@ -1,6 +1,14 @@
 <h1 align="center"><b>0X00. PYTHON - VARIABLE ANNOTATIONS</b></h1>
 <div align="center"><code>Python</code> <code>Back-end</code></div>
 
+## Concepts
+<details>
+<summary><b><a href="https://intranet.alxswe.com/rltoken/5j0OtdWh36_HVAHKJX2gaA">Advanced Python</a></b></summary><br>
+
+
+<br><p align="center">※※※※※※※※※※※※</p><br>
+</details>
+
 <!-- <br>
 <hr>
 <h3><a href=>Notes</a></h3>
