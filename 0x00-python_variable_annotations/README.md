@@ -42,10 +42,6 @@
 <br>
 
 ## Learning Objectives
-<h3>General</h3>
-
-
-<br>
 <details>
 <summary><b><a href=" "> </a>Type annotations in Python 3</b></summary><br>
 
