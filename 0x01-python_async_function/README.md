@@ -15,7 +15,7 @@
 
 ## Resources
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/zYkXScziW1D5rNdNEvObjQ">Async IO in Python: A Complete Walkthrough</a></b></summary><br>
+<summary><b><a href="https://realpython.com/async-io-python/">Async IO in Python: A Complete Walkthrough</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
