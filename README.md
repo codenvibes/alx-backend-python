@@ -1,4 +1,4 @@
-<h1 align="center"><b>ALX-BACKEND-JAVASCRIPT</b></h1>
+<h1 align="center"><b>ALX-BACKEND-PYTHON</b></h1>
 
 ## Projects:
 
