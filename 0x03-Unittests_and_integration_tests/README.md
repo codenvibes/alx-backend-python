@@ -1,6 +1,7 @@
 <h1 align="center"><b>0X03. UNITTESTS AND INTEGRATION TESTS</b></h1>
 <div align="center"><code>UnitTests</code> <code>Back-end</code> <code>Integration tests</code></div>
 
+<br>
 <div align="center"><img alt="" src="https://github.com/codenvibes/alx-backend-python/blob/master/0x03-Unittests_and_integration_tests/images/f088970b450e82c881ea.gif"></div>
 
 <!-- <br>
