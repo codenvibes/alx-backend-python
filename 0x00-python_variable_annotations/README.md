@@ -22,7 +22,7 @@
 
 ## Resources
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/5j0OtdWh36_HVAHKJX2gaA">Python 3 typing documentation</a></b></summary><br>
+<summary><b><a href="https://docs.python.org/3/library/typing.html">Python 3 typing documentation</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
