@@ -31,7 +31,7 @@
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/72mVf1s8rx2ih_U2WjBmaA">random.uniform</a></b></summary><br>
+<summary><b><a href="https://docs.python.org/3/library/random.html#random.uniform">random.uniform</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
