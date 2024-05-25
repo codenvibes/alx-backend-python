@@ -53,7 +53,7 @@ $ python -m unittest path/to/test_file.py
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/mI7qc3Y42aZ7GTlLXDxgEg">parameterized</a></b></summary><br>
+<summary><b><a href="https://pypi.org/project/parameterized/">parameterized</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
