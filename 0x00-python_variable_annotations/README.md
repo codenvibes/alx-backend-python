@@ -30,7 +30,7 @@
 
 
 <details>
-<summary><b><a href="https://intranet.alxswe.com/rltoken/Eud-nrUG7x3iT6JD2Sas-g">MyPy cheat sheet</a></b></summary><br>
+<summary><b><a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html">MyPy cheat sheet</a></b></summary><br>
 
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
