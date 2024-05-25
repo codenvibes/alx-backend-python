@@ -1,6 +1,9 @@
 <h1 align="center"><b>0X02. PYTHON - ASYNC COMPREHENSION</b></h1>
 <div align="center"><code>Python</code> <code>Back-end</code></div>
 
+<br>
+<div align="center"><img alt="" src="https://github.com/codenvibes/alx-backend-python/blob/master/0x02-python_async_comprehension/images/ee85b9f67c384e29525b.png"></div>
+
 <!-- <br>
 <hr>
 <h3><a href=>Notes</a></h3>
@@ -82,6 +85,7 @@
 - All your functions should have a documentation (<code>python3 -c 'print(__import__("my_module").my_function.__doc__)'</code>
 - A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 - All your functions and coroutines must be type-annotated.
+
 
 <!--==================================================-->
 <br>
