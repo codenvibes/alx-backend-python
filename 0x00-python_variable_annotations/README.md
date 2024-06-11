@@ -45,6 +45,133 @@
 <details>
 <summary><b><a href=" "> </a>Type annotations in Python 3</b></summary><br>
 
+Type annotations in Python 3 are a feature that allows developers to specify the types of variables, function parameters, and return values. This feature was introduced in Python 3.5 through PEP 484 and has since been improved in subsequent versions. Type annotations help with code readability, provide hints for IDEs and linters, and facilitate static type checking using tools like `mypy`.
+
+Here's an overview of how to use type annotations in Python 3:
+
+### Basic Type Annotations
+
+#### Variables
+
+You can annotate the type of variables using the syntax:
+```python
+variable_name: type = value
+```
+
+Example:
+```python
+name: str = "John"
+age: int = 30
+height: float = 5.9
+is_active: bool = True
+```
+
+#### Functions
+
+You can annotate the types of function parameters and return values:
+```python
+def function_name(param1: type1, param2: type2) -> return_type:
+    pass
+```
+
+Example:
+```python
+def greet(name: str) -> str:
+    return f"Hello, {name}"
+
+def add(a: int, b: int) -> int:
+    return a + b
+```
+
+### Complex Types
+
+#### Lists, Tuples, and Dictionaries
+
+For collections, you can use the `List`, `Tuple`, and `Dict` types from the `typing` module:
+```python
+from typing import List, Tuple, Dict
+
+names: List[str] = ["Alice", "Bob", "Charlie"]
+point: Tuple[int, int] = (10, 20)
+scores: Dict[str, int] = {"Alice": 85, "Bob": 92}
+```
+
+#### Optional and Union Types
+
+To indicate that a variable can be of more than one type, or that it can be `None`, you can use `Union` and `Optional` from the `typing` module:
+```python
+from typing import Union, Optional
+
+# A variable that can be either an int or a float
+number: Union[int, float] = 3.14
+
+# A variable that can be either a string or None
+name: Optional[str] = None
+```
+
+### Type Aliases
+
+You can create type aliases to simplify complex type annotations:
+```python
+from typing import List, Dict
+
+# Define a type alias
+Address = Dict[str, str]
+
+# Use the type alias
+addresses: List[Address] = [{"street": "Main St", "city": "Springfield"}]
+```
+
+### Generics
+
+Generics can be used to create functions and classes that can work with any type. This is done using `TypeVar` from the `typing` module:
+```python
+from typing import TypeVar, Generic, List
+
+T = TypeVar('T')
+
+def get_first_element(elements: List[T]) -> T:
+    return elements[0]
+
+# Example usage
+print(get_first_element([1, 2, 3]))  # Output: 1
+print(get_first_element(["a", "b", "c"]))  # Output: "a"
+```
+
+### Annotating Class Methods
+
+You can also annotate class methods, including `self` and `cls`:
+```python
+from typing import List
+
+class Person:
+    def __init__(self, name: str, age: int) -> None:
+        self.name = name
+        self.age = age
+
+    def greet(self) -> str:
+        return f"Hello, my name is {self.name}."
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "Person":
+        return cls(name=data["name"], age=data["age"])
+```
+
+### Type Checking with `mypy`
+
+To perform static type checking, you can use `mypy`, a static type checker for Python:
+```sh
+pip install mypy
+```
+
+Then run `mypy` on your Python files:
+```sh
+mypy your_script.py
+```
+
+### Summary
+
+Type annotations are a powerful feature in Python that can improve code clarity and facilitate debugging and maintenance. By using type annotations, you can make your code more understandable and leverage tools for static type checking to catch potential issues early in the development process.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
