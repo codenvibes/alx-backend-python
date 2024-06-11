@@ -302,6 +302,90 @@ By using type annotations, you can make your code clearer and more maintainable,
 <details>
 <summary><b><a href=" "> </a>Duck typing</b></summary><br>
 
+Duck typing is a concept in dynamic typing languages like Python, where the type or class of an object is determined by its behavior (methods and properties) rather than its explicit type. The term comes from the phrase "If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck."
+
+In duck typing, you don't check the type of an object to determine if it has the right interface; you just use the object and assume it has the necessary methods and attributes. This can make code more flexible and easier to extend.
+
+Here's an example to illustrate duck typing in Python:
+
+### Example of Duck Typing
+
+Suppose you have a function that processes different types of animals, and you want to include a behavior where they can "speak". Instead of checking the type of each animal, you rely on the `speak` method being present:
+
+```python
+class Dog:
+    def speak(self):
+        return "Woof!"
+
+class Cat:
+    def speak(self):
+        return "Meow!"
+
+class Bird:
+    def speak(self):
+        return "Tweet!"
+
+def animal_sound(animal):
+    print(animal.speak())
+
+# Sample usage
+dog = Dog()
+cat = Cat()
+bird = Bird()
+
+animal_sound(dog)  # Outputs: Woof!
+animal_sound(cat)  # Outputs: Meow!
+animal_sound(bird) # Outputs: Tweet!
+```
+
+In this example, the `animal_sound` function doesn't care about the type of the object passed to it. As long as the object has a `speak` method, it will work correctly.
+
+### Advantages of Duck Typing
+
+1. **Flexibility:** Allows you to write more generic and reusable code.
+2. **Ease of Extension:** New types can be added without modifying existing code as long as they conform to the expected interface.
+3. **Simplicity:** Reduces the need for complex type hierarchies and inheritance.
+
+### Potential Issues
+
+1. **Runtime Errors:** If an object doesn’t have the expected method, it will raise an `AttributeError` at runtime.
+2. **Readability:** It can sometimes be less clear what types are expected, making code harder to understand.
+
+### Duck Typing with Type Annotations
+
+Even with duck typing, you can use type annotations to indicate the expected interface using `Protocol` from the `typing` module (available in Python 3.8+). This allows you to define the expected methods without enforcing a specific type.
+
+```python
+from typing import Protocol
+
+class Speakable(Protocol):
+    def speak(self) -> str:
+        ...
+
+def animal_sound(animal: Speakable) -> None:
+    print(animal.speak())
+
+class Dog:
+    def speak(self) -> str:
+        return "Woof!"
+
+class Cat:
+    def speak(self) -> str:
+        return "Meow!"
+
+# Sample usage
+dog = Dog()
+cat = Cat()
+
+animal_sound(dog)  # Outputs: Woof!
+animal_sound(cat)  # Outputs: Meow!
+```
+
+In this example, `Speakable` is a protocol that specifies the `speak` method. The `animal_sound` function expects any object that conforms to the `Speakable` protocol, ensuring that the object has a `speak` method.
+
+### Summary
+
+Duck typing is a powerful feature in Python that allows for more flexible and dynamic code by relying on the presence of methods and attributes rather than explicit types. While it offers many advantages, it also requires careful handling to avoid runtime errors. Using type annotations and protocols can help document and enforce expected behaviors, combining the best of both worlds.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
@@ -310,6 +394,158 @@ By using type annotations, you can make your code clearer and more maintainable,
 <details>
 <summary><b><a href=" "> </a>How to validate your code with <code>mypy</code></b></summary><br>
 
+Validating your code with `mypy` is a straightforward process that involves a few steps:
+
+1. **Install mypy**: First, you need to install `mypy` if you haven't already. You can do this using `pip`:
+   ```bash
+   pip install mypy
+   ```
+
+2. **Add Type Annotations**: Ensure your code has type annotations for variables, function parameters, and return types. Here's a simple example:
+   ```python
+   def add(x: int, y: int) -> int:
+       return x + y
+
+   def greet(name: str) -> str:
+       return f"Hello, {name}!"
+   ```
+
+3. **Run mypy**: Run `mypy` on your Python script or module. You can do this from the command line:
+   ```bash
+   mypy your_script.py
+   ```
+
+4. **Fix Reported Issues**: `mypy` will report any type inconsistencies or errors it finds. Fix these issues to ensure your code conforms to the specified types.
+
+### Detailed Example
+
+Let's walk through an example:
+
+#### Step 1: Create a Python Script with Type Annotations
+
+Create a file named `example.py` with the following content:
+
+```python
+from typing import List, Optional, Union
+
+def add(x: int, y: int) -> int:
+    return x + y
+
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+def find_student(student_id: int) -> Optional[str]:
+    students = {1: "Alice", 2: "Bob"}
+    return students.get(student_id)
+
+def process_data(data: Union[str, int]) -> str:
+    if isinstance(data, int):
+        return f"Processing number: {data}"
+    return f"Processing string: {data}"
+
+def calculate_averages(grades: List[int]) -> float:
+    return sum(grades) / len(grades)
+```
+
+#### Step 2: Install mypy
+
+If you haven't installed `mypy` yet, do so using `pip`:
+```bash
+pip install mypy
+```
+
+#### Step 3: Run mypy
+
+Run `mypy` on your script:
+
+```bash
+mypy example.py
+```
+
+#### Step 4: Interpret the Output and Fix Issues
+
+`mypy` will output something like this if there are type errors:
+
+```
+example.py:14: error: Incompatible return value type (got "Optional[str]", expected "str")
+example.py:19: error: Argument 1 to "sum" has incompatible type "List[float]"; expected "Iterable[int]"
+```
+
+These messages indicate that there are type mismatches in the `find_student` and `calculate_averages` functions.
+
+### Common Fixes
+
+1. **Optional Return Type**: Ensure that functions that can return `None` are properly annotated with `Optional`.
+
+2. **Correct Type Usage**: Ensure that you are passing the correct types to functions and using them correctly within your code.
+
+### Improved Example
+
+Here’s how you can fix the issues based on `mypy` feedback:
+
+```python
+from typing import List, Optional, Union
+
+def add(x: int, y: int) -> int:
+    return x + y
+
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+def find_student(student_id: int) -> Optional[str]:
+    students = {1: "Alice", 2: "Bob"}
+    return students.get(student_id)
+
+def process_data(data: Union[str, int]) -> str:
+    if isinstance(data, int):
+        return f"Processing number: {data}"
+    return f"Processing string: {data}"
+
+def calculate_averages(grades: List[int]) -> float:
+    return sum(grades) / len(grades)
+```
+
+Now, re-run `mypy`:
+
+```bash
+mypy example.py
+```
+
+If everything is correct, `mypy` should not report any errors:
+
+```
+Success: no issues found in 1 source file
+```
+
+### Additional Tips
+
+- **Use `# type: ignore`**: If `mypy` complains about a particular line but you are certain it is correct, you can silence the warning by adding `# type: ignore` to that line.
+  
+  ```python
+  def find_student(student_id: int) -> Optional[str]:
+      students = {1: "Alice", 2: "Bob"}
+      return students.get(student_id)  # type: ignore
+  ```
+
+- **Type Aliases**: Use type aliases to simplify complex type annotations.
+  
+  ```python
+  from typing import List, Tuple
+
+  Student = Tuple[int, str]
+  def get_students() -> List[Student]:
+      return [(1, "Alice"), (2, "Bob")]
+  ```
+
+- **Config File**: You can create a `mypy.ini` or `setup.cfg` configuration file to customize `mypy` behavior.
+
+  ```ini
+  [mypy]
+  ignore_missing_imports = True
+  disallow_untyped_defs = True
+  ```
+
+Using `mypy` helps catch type-related errors early, making your code more robust and maintainable.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
