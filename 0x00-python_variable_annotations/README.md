@@ -180,6 +180,120 @@ Type annotations are a powerful feature in Python that can improve code clarity 
 <details>
 <summary><b><a href=" "> </a>How you can use type annotations to specify function signatures and variable types</b></summary><br>
 
+Type annotations in Python provide a way to specify the types of variables, function parameters, and return values. They can improve code readability, facilitate static type checking, and help with IDE autocompletion. Here's a guide on how to use type annotations for function signatures and variable types:
+
+### 1. Variable Type Annotations
+
+To specify the type of a variable, use a colon followed by the type:
+
+```python
+# Basic types
+name: str = "Alice"
+age: int = 30
+is_student: bool = True
+height: float = 5.7
+
+# List and dictionary types
+numbers: list[int] = [1, 2, 3, 4, 5]
+grades: dict[str, int] = {"math": 90, "science": 85}
+```
+
+### 2. Function Signatures
+
+Type annotations can also be used to specify the types of function parameters and return values:
+
+```python
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+def add(x: int, y: int) -> int:
+    return x + y
+
+def get_top_students(students: dict[str, int]) -> list[str]:
+    return [name for name, grade in students.items() if grade > 90]
+```
+
+### 3. Optional Types
+
+Sometimes, a variable or a function parameter can be of multiple types or `None`. Use the `Optional` type hint from the `typing` module:
+
+```python
+from typing import Optional
+
+def find_student(student_id: int) -> Optional[str]:
+    if student_id == 1:
+        return "Alice"
+    return None
+```
+
+### 4. Union Types
+
+When a variable or parameter can be one of several types, use the `Union` type hint:
+
+```python
+from typing import Union
+
+def process_data(data: Union[str, int]) -> str:
+    if isinstance(data, int):
+        return f"Processing number: {data}"
+    return f"Processing string: {data}"
+```
+
+### 5. Complex Data Structures
+
+For more complex data structures, use `List`, `Dict`, `Tuple`, etc., from the `typing` module:
+
+```python
+from typing import List, Dict, Tuple
+
+def calculate_averages(grades: List[int]) -> float:
+    return sum(grades) / len(grades)
+
+def student_info() -> Dict[str, Tuple[int, float]]:
+    return {"Alice": (21, 3.5), "Bob": (22, 3.7)}
+```
+
+### 6. Custom Types
+
+For more specific types, you can create your own type aliases:
+
+```python
+from typing import List, Dict, Tuple
+
+Student = Dict[str, Union[int, float]]
+
+def get_student_details() -> List[Student]:
+    return [{"name": "Alice", "age": 21, "gpa": 3.5}, {"name": "Bob", "age": 22, "gpa": 3.7}]
+```
+
+### 7. Type Checking
+
+While type annotations do not enforce types at runtime, they are useful for static type checkers like `mypy`. To check your code with `mypy`, install it and run:
+
+```bash
+pip install mypy
+mypy your_script.py
+```
+
+### Example Code with Type Annotations
+
+```python
+from typing import List, Dict, Union
+
+def student_summary(students: List[Dict[str, Union[int, str]]]) -> None:
+    for student in students:
+        name: str = student["name"]
+        age: int = student["age"]
+        print(f"Student Name: {name}, Age: {age}")
+
+# Sample usage
+students_data = [{"name": "Alice", "age": 21}, {"name": "Bob", "age": 22}]
+student_summary(students_data)
+```
+
+In this example, `student_summary` takes a list of dictionaries where each dictionary represents a student with `name` as a string and `age` as an integer. The function prints the name and age of each student.
+
+By using type annotations, you can make your code clearer and more maintainable, and leverage tools like `mypy` to catch type-related errors before they cause problems at runtime.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
