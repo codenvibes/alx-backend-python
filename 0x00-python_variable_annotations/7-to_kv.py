@@ -10,12 +10,12 @@ def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """
     Returns a tuple with the given string and the square of the given
     number.
-    
+
     Args:
         k (str): The input string.
         v (Union[int, float]): The input number, which can be an integer
                                or a float.
-        
+
     Returns:
         Tuple[str, float]: A tuple where the first element is the input
                            string `k` and the second element is the
