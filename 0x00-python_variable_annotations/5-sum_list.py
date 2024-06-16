@@ -2,9 +2,10 @@
 """
 This script defines a function to sum the elements of a list.
 """
+from typing import List
 
 
-def sum_list(input_list: list[float]) -> float:
+def sum_list(input_list: List[float]) -> float:
     """
     Calculate the sum of all elements in a list.
 
