@@ -11,6 +11,34 @@
 <br>
 <div align="center"><img alt="" src="https://github.com/codenvibes/alx-backend-python/blob/master/0x00-python_variable_annotations/images/y9y25tefi5401.png"></div>
 
+<div align="center">
+<details>
+<summary>⬆️This meme</summary><br>
+<div align="left">
+
+Programming languages can be categorized in a few ways, including how they handle data types. Typing refers to how strictly a programming language enforces data types. 
+
+* Statically typed languages  are those that require you to explicitly declare the data type of a variable before you use it. This can help to prevent errors, but it can also be more verbose.
+* Dynamically typed languages are those that do not require you to declare the data types of variables. This can make the code more concise, but it can also be more error-prone.
+
+The meme is comparing two different paradigms for managing code dependencies: CommonJS (CJS) and Python. 
+
+* CommonJS is a module system that is often used with dynamically typed languages like JavaScript. It uses a synchronous require function to load modules.
+* Python is a general-purpose, high-level programming language that can be  statically or dynamically typed. It uses an import statement to load modules.
+
+The meme  plays on the stereotype that CJS is a complex and error-prone way to manage dependencies,  while Python’s import statement is  much simpler and  easier to use.
+
+Here are some additional details about CJS and Python:
+
+* **CommonJS** is a module system that is designed to run in server-side environments. It uses a synchronous require function to load modules. This can make it slow and difficult to debug.
+* **Python** is a general-purpose programming language that can be used for a wide variety of tasks. It has a built-in module system that uses an import statement to load modules. This makes it simple and easy to use.
+
+Whether a language is statically or dynamically typed is a separate consideration from how it handles code dependencies. 
+
+</div>
+</details>
+</div>
+
 <!-- <br>
 <hr>
 <h3><a href=>Notes</a></h3>
