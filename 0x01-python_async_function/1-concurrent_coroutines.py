@@ -6,6 +6,8 @@ in ascending order.
 """
 import asyncio
 from typing import List
+
+
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
@@ -22,7 +24,9 @@ async def wait_n(n: int, max_delay: int) -> list[float]:
     Returns:
         List[float]: A sorted list of the delays of the completed coroutines.
     """
-    list_of_delays = await asyncio.gather(
-        *tuple(map(lambda _: wait_random(max_delay), range(n)))
-    )
-    return sorted(list_of_delays)
+    delays = []
+    tasks = [wait_random(max_delay) for _ in range(n)]
+    for task in asyncio.as_completed(tasks):
+        delay = await task
+        delays.append(delay)
+    return sorted(delays)
