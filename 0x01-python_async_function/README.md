@@ -222,7 +222,7 @@ if __name__ == "__main__":
 
 
 <details>
-<summary><b><a href=" "> </a>How to run concurrent coroutines</b></summary><br>
+<summary><b><a href=" "> </a>How to run concurrent coroutines</b></summary>
 
 ### Using `asyncio.gather`
 
