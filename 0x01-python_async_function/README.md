@@ -374,6 +374,139 @@ if __name__ == "__main__":
 <details>
 <summary><b><a href=" "> </a>How to use the <code>random</code> module</b></summary><br>
 
+The `random` module in Python provides functions for generating random numbers and for working with random data. Below are some common uses and examples of how to use the `random` module.
+
+### Importing the Module
+
+First, you need to import the `random` module:
+
+```python
+import random
+```
+
+### Generating Random Numbers
+
+#### 1. Random Float Between 0 and 1
+```python
+random_float = random.random()
+print(random_float)  # Example output: 0.37444887175646646
+```
+
+#### 2. Random Float in a Range
+```python
+random_float_range = random.uniform(1.5, 10.5)
+print(random_float_range)  # Example output: 7.892800632839505
+```
+
+#### 3. Random Integer in a Range
+```python
+random_int = random.randint(1, 10)
+print(random_int)  # Example output: 7
+```
+
+#### 4. Random Integer with a Step
+```python
+random_int_step = random.randrange(0, 101, 5)
+print(random_int_step)  # Example output: 20
+```
+
+### Random Choices from a Sequence
+
+#### 1. Random Element from a List
+```python
+choices = ['apple', 'banana', 'cherry']
+random_choice = random.choice(choices)
+print(random_choice)  # Example output: 'banana'
+```
+
+#### 2. Random Sample of Elements from a List
+```python
+random_sample = random.sample(choices, 2)
+print(random_sample)  # Example output: ['cherry', 'apple']
+```
+
+#### 3. Randomly Shuffle a List
+```python
+random.shuffle(choices)
+print(choices)  # Example output: ['banana', 'cherry', 'apple']
+```
+
+#### 4. Random Choices with Replacement
+```python
+random_choices_with_replacement = random.choices(choices, k=3)
+print(random_choices_with_replacement)  # Example output: ['apple', 'banana', 'apple']
+```
+
+### Setting a Seed
+
+Setting a seed ensures that the random numbers are reproducible, which is useful for debugging or when you need reproducible results.
+
+```python
+random.seed(42)
+print(random.random())  # Example output: 0.6394267984578837
+print(random.randint(1, 10))  # Example output: 2
+```
+
+### Other Useful Functions
+
+#### 1. Generating Random Bits
+```python
+random_bits = random.getrandbits(8)
+print(random_bits)  # Example output: 239 (a random 8-bit number)
+```
+
+#### 2. Random Gaussian Distribution
+```python
+mu, sigma = 0, 1  # mean and standard deviation
+random_gaussian = random.gauss(mu, sigma)
+print(random_gaussian)  # Example output: -0.19646717322454657
+```
+
+### Putting It All Together
+
+Here is a comprehensive example that demonstrates various functionalities of the `random` module:
+
+```python
+import random
+
+# Setting a seed
+random.seed(42)
+
+# Random float between 0 and 1
+print("Random float:", random.random())
+
+# Random float in a range
+print("Random float between 1.5 and 10.5:", random.uniform(1.5, 10.5))
+
+# Random integer in a range
+print("Random integer between 1 and 10:", random.randint(1, 10))
+
+# Random integer with a step
+print("Random integer between 0 and 100 with step 5:", random.randrange(0, 101, 5))
+
+# Random element from a list
+choices = ['apple', 'banana', 'cherry']
+print("Random choice from list:", random.choice(choices))
+
+# Random sample from a list
+print("Random sample of 2 from list:", random.sample(choices, 2))
+
+# Shuffle a list
+random.shuffle(choices)
+print("Shuffled list:", choices)
+
+# Random choices with replacement
+print("Random choices with replacement:", random.choices(choices, k=3))
+
+# Random bits
+print("Random 8-bit number:", random.getrandbits(8))
+
+# Random Gaussian distribution
+mu, sigma = 0, 1
+print("Random Gaussian number:", random.gauss(mu, sigma))
+```
+
+This guide should provide a solid foundation for using the `random` module in Python for generating random numbers and making random selections.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
