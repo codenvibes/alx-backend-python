@@ -288,6 +288,84 @@ if __name__ == "__main__":
 <details>
 <summary><b><a href=" "> </a>How to create <code>asyncio</code> tasks</b></summary><br>
 
+Creating tasks in `asyncio` allows you to schedule coroutines to run concurrently. This can be done using `asyncio.create_task`, which returns an `asyncio.Task` object. This object can be used to manage the execution of the coroutine. Here’s a detailed guide on how to create and manage asyncio tasks:
+
+### Step-by-Step Guide to Creating `asyncio` Tasks
+
+1. **Import the `asyncio` Module**:
+   Make sure you import the `asyncio` module to access its functions and classes.
+
+2. **Define Asynchronous Functions**:
+   Create asynchronous functions (coroutines) that you want to run as tasks using the `async` keyword.
+
+3. **Create and Schedule Tasks**:
+   Use `asyncio.create_task` to create tasks from these coroutines. This schedules them to run concurrently.
+
+4. **Run the Event Loop**:
+   Use `asyncio.run` to run the main coroutine that manages your tasks.
+
+### Example
+
+Here's a complete example demonstrating these steps:
+
+```python
+import asyncio
+
+# Define asynchronous functions (coroutines)
+async def async_task_1():
+    print("Task 1 started")
+    await asyncio.sleep(1)
+    print("Task 1 finished")
+    return "Result from task 1"
+
+async def async_task_2():
+    print("Task 2 started")
+    await asyncio.sleep(2)
+    print("Task 2 finished")
+    return "Result from task 2"
+
+async def async_task_3():
+    print("Task 3 started")
+    await asyncio.sleep(3)
+    print("Task 3 finished")
+    return "Result from task 3"
+
+# Main coroutine to create and manage tasks
+async def main():
+    # Create tasks
+    task1 = asyncio.create_task(async_task_1())
+    task2 = asyncio.create_task(async_task_2())
+    task3 = asyncio.create_task(async_task_3())
+
+    # Optionally, await on individual tasks to get their results
+    result1 = await task1
+    result2 = await task2
+    result3 = await task3
+
+    print(result1)
+    print(result2)
+    print(result3)
+
+# Run the main coroutine
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Explanation
+
+1. **Define Asynchronous Functions**:
+   - `async_task_1`, `async_task_2`, and `async_task_3` are asynchronous functions that simulate asynchronous operations using `await asyncio.sleep(x)`.
+
+2. **Create and Schedule Tasks**:
+   - In the `main` coroutine, `asyncio.create_task` is used to create tasks from these coroutines.
+   - Each call to `asyncio.create_task` schedules the coroutine to run concurrently.
+
+3. **Await Task Results**:
+   - `await task1`, `await task2`, and `await task3` are used to wait for the tasks to complete and get their results.
+   - This ensures that the results are printed only after the respective tasks have finished.
+
+4. **Run the Event Loop**:
+   - `asyncio.run(main())` is used to run the `main` coroutine, which starts the event loop and manages the execution of the tasks.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
