@@ -240,44 +240,6 @@ if __name__ == "__main__":
 3. **Run the Main Coroutine**:
    - `asyncio.run(main())` is used to run the `main` coroutine. This starts the event loop, executes `main`, and stops the loop when `main` completes.
 
-### Additional Features
-
-#### Using `asyncio.create_task`
-
-For more control over task execution and to manage tasks individually, you can use `asyncio.create_task`:
-
-```python
-async def main():
-    task1 = asyncio.create_task(async_task_1())
-    task2 = asyncio.create_task(async_task_2())
-    
-    await task1
-    await task2
-```
-
-#### Handling Exceptions
-
-You can handle exceptions in your asynchronous functions using try-except blocks:
-
-```python
-async def async_task_3():
-    try:
-        await asyncio.sleep(1)
-        raise ValueError("An error occurred in Task 3")
-    except ValueError as e:
-        print(f"Caught an error: {e}")
-
-async def main():
-    await asyncio.gather(
-        async_task_1(),
-        async_task_2(),
-        async_task_3()
-    )
-```
-
-In this enhanced example, `async_task_3` demonstrates how to handle exceptions within an asynchronous function.
-
-By following these steps, you can effectively execute and manage asynchronous programs using `asyncio` in Python.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
