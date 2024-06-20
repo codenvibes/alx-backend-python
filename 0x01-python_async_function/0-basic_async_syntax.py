@@ -3,7 +3,7 @@
 A module to provide asynchronous waiting functionality with a random delay.
 """
 import random
-from asyncio import sleep
+import asyncio
 
 
 async def wait_random(max_delay: int = 10) -> float:
@@ -17,5 +17,5 @@ async def wait_random(max_delay: int = 10) -> float:
         float: The actual random delay in seconds.
     """
     random_delay = random.uniform(0, max_delay)
-    await sleep(random_delay)
+    await asyncio.sleep(random_delay)
     return random_delay
