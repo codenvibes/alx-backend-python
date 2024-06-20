@@ -106,30 +106,6 @@ asyncio.run(main())
 
 In this example, `fetch_url` is an asynchronous function that fetches the content of a URL using `aiohttp`. The `main` function calls `fetch_url` and prints the result.
 
-### Concurrent Execution with `asyncio.gather`
-
-To run multiple asynchronous tasks concurrently, you can use `asyncio.gather`:
-
-```python
-async def say_hello():
-    print("Hello")
-    await asyncio.sleep(1)
-    print("World")
-
-async def say_goodbye():
-    print("Goodbye")
-    await asyncio.sleep(2)
-    print("Cruel World")
-
-async def main():
-    await asyncio.gather(say_hello(), say_goodbye())
-
-# Run the main function
-asyncio.run(main())
-```
-
-In this example, `say_hello` and `say_goodbye` run concurrently. The `asyncio.gather` function takes multiple coroutines and runs them in parallel.
-
 ### Error Handling in Asynchronous Code
 
 You can handle errors in asynchronous code using try-except blocks:
