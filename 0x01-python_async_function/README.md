@@ -248,6 +248,38 @@ if __name__ == "__main__":
 <details>
 <summary><b><a href=" "> </a>How to run concurrent coroutines</b></summary><br>
 
+### Using `asyncio.gather`
+
+The `asyncio.gather` function is the simplest way to run multiple coroutines concurrently. It runs the given coroutines in parallel and waits for all of them to finish.
+
+```python
+import asyncio
+
+async def async_task_1():
+    print("Task 1 started")
+    await asyncio.sleep(1)
+    print("Task 1 finished")
+
+async def async_task_2():
+    print("Task 2 started")
+    await asyncio.sleep(2)
+    print("Task 2 finished")
+
+async def async_task_3():
+    print("Task 3 started")
+    await asyncio.sleep(3)
+    print("Task 3 finished")
+
+async def main():
+    await asyncio.gather(
+        async_task_1(),
+        async_task_2(),
+        async_task_3()
+    )
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
