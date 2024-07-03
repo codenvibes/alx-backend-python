@@ -20,7 +20,7 @@ $ python -m unittest path/to/test_file.py
 
 <br>
 <hr>
-<h3><a href="https://github.com/codenvibes/alx-backend-python/blob/master/0x03-Unittests_and_integration_tests/notes/notes.md">Notes</a></h3>
+<h3><a href="https://github.com/codenvibes/alx-backend-python/tree/master/0x03-Unittests_and_integration_tests/notes">Notes</a></h3>
 <hr>
 
 
