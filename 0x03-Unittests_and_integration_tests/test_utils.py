@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # AUTH: BNV
 """
-Unit tests for the utils.access_nested_map function.
+Unit tests for utility functions in utils module.
 """
 import unittest
 from unittest.mock import patch, Mock
 from parameterized import parameterized
-from utils import access_nested_map, get_json
+from utils import access_nested_map, get_json, memoize
 
 
 class TestAccessNestedMap(unittest.TestCase):
@@ -65,3 +65,32 @@ class TestGetJson(unittest.TestCase):
         mock_get.assert_called_once_with(test_url)
         # Check if get_json returned the expected payload
         self.assertEqual(result, test_payload)
+
+
+class TestMemoize(unittest.TestCase):
+    """Unit tests for the memoize decorator."""
+
+    def test_memoize(self):
+        """Test memoization of a method using the memoize decorator."""
+
+        class TestClass:
+            """A class to test memoization."""
+
+            def a_method(self):
+                """A method that returns a constant value."""
+                return 42
+
+            @memoize
+            def a_property(self):
+                """A memoized property that calls a_method."""
+                return self.a_method()
+
+        # Patching a_method to mock its behavior
+        with patch.object(TestClass, 'a_method') as mocked:
+
+            # Create an instance of TestClass
+            obj = TestClass()
+
+            obj.a_property
+            obj.a_property
+            mocked.asset_called_once()
