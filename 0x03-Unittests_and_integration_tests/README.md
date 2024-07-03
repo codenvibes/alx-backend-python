@@ -130,6 +130,76 @@ $ python -m unittest path/to/test_file.py
 <details>
 <summary><b><a href=" "> </a>Common testing patterns such as mocking, parametrizations and fixtures</b></summary><br>
 
+Testing patterns are strategies used to make tests more readable, maintainable, and effective. Here are some common testing patterns and techniques:
+
+### Mocking
+Mocking is the practice of replacing real objects with mocks, which simulate the behavior of real objects. This is useful for isolating the unit of code under test and for simulating different scenarios.
+
+- **Purpose**: To isolate the unit of code being tested and to simulate different conditions or behaviors.
+- **Common Libraries**: `unittest.mock` in Python, `Mockito` in Java, `Sinon.js` in JavaScript.
+
+**Example (Python with unittest.mock)**:
+```python
+from unittest.mock import MagicMock
+import requests
+
+def fetch_data(url):
+    response = requests.get(url)
+    return response.json()
+
+def test_fetch_data():
+    mock_response = MagicMock()
+    mock_response.json.return_value = {"key": "value"}
+    
+    with unittest.mock.patch('requests.get', return_value=mock_response):
+        result = fetch_data('http://example.com')
+        assert result == {"key": "value"}
+```
+
+### Parametrization
+Parametrization is the practice of running the same test with different inputs. This helps in verifying that the code works correctly for a range of input values and scenarios.
+
+- **Purpose**: To test the same functionality with different inputs efficiently.
+- **Common Libraries**: `pytest` in Python, `JUnit` in Java, `Jest` in JavaScript.
+
+**Example (Python with pytest)**:
+```python
+import pytest
+
+@pytest.mark.parametrize("input, expected", [
+    ("abc", 3),
+    ("", 0),
+    ("hello", 5),
+])
+def test_string_length(input, expected):
+    assert len(input) == expected
+```
+
+### Fixtures
+Fixtures are used to set up a known state before tests run and to clean up afterward. They can provide context or data needed for tests and help ensure tests are isolated and repeatable.
+
+- **Purpose**: To prepare a consistent and reusable environment for tests.
+- **Common Libraries**: `pytest` in Python, `JUnit` in Java, `Mocha` in JavaScript.
+
+**Example (Python with pytest)**:
+```python
+import pytest
+
+@pytest.fixture
+def sample_data():
+    return {"name": "John", "age": 30}
+
+def test_sample_data(sample_data):
+    assert sample_data["name"] == "John"
+    assert sample_data["age"] == 30
+```
+
+### Summary of Common Testing Patterns
+1. **Mocking**: Replaces real objects with mock objects to isolate the unit of code being tested.
+2. **Parametrization**: Runs the same test with different inputs to ensure the code works correctly for a variety of cases.
+3. **Fixtures**: Sets up and tears down the test environment to provide a consistent context for tests.
+
+By using these testing patterns, you can create more robust, maintainable, and effective tests that help ensure the quality of your code.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
