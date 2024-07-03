@@ -76,9 +76,9 @@ $ python -m unittest path/to/test_file.py
 <details>
 <summary><b><a href=" "> </a>The difference between unit and integration tests.</b></summary><br>
 
-Unit testing is a type of automated testing where code is written to test a small isolated unit of the application. That small unit can be a function, a module or a component.
+**Unit testing is a type of automated testing where code is written to test a small isolated unit of the application. That small unit can be a function, a module or a component.**
 
-Integration tests focus on testing the interaction between multiple components or systems to ensure they work together as expected.
+**Integration tests focus on testing the interaction between multiple components or systems to ensure they work together as expected.**
 
 
 ### Unit Tests
