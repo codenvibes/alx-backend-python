@@ -123,8 +123,6 @@ $ python -m unittest path/to/test_file.py
 - **Unit Tests**: Test individual components in isolation, fast, fine-grained, identify logic errors within units.
 - **Integration Tests**: Test the interaction between components, slower, coarse-grained, identify issues in the integration and data flow between units.
 
-Using both unit and integration tests together helps ensure that the individual components of your application are reliable and that they work together seamlessly, providing comprehensive coverage and robust testing of your software.
-
 <br><p align="center">※※※※※※※※※※※※</p><br>
 </details>
 
