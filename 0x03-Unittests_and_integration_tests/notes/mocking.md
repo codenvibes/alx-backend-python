@@ -1,5 +1,4 @@
-<details>
-<summary><b><a href=""></a>Mocking</b></summary><br>
+### Mocking
 
 Mocking is a technique used in unit testing to replace real objects and functions with simulated versions, known as "mocks," that mimic the behavior of the real ones. This allows you to isolate the function being tested and focus only on its logic, without interference from external dependencies or side effects.
 
@@ -58,4 +57,3 @@ In this example:
 By using mocks, you ensure that the unit test for `get_user_info` is fast, isolated, and focused solely on the logic within that function.
 
 <br><p align="center">※※※※※※※※※※※※</p><br>
-</details>
