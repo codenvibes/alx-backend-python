@@ -76,8 +76,6 @@ $ python -m unittest path/to/test_file.py
 <details>
 <summary><b><a href=" "> </a>The difference between unit and integration tests.</b></summary><br>
 
-Unit and integration tests are both essential components of software testing, but they serve different purposes and focus on different levels of the application. Here's a breakdown of their differences:
-
 ### Unit Tests
 1. **Scope**:
    - Unit tests focus on testing individual components or functions of the code in isolation.
