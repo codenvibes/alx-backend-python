@@ -18,10 +18,10 @@ Execute your tests with
 $ python -m unittest path/to/test_file.py
 ```
 
-<!-- <br>
+<br>
 <hr>
-<h3><a href=>Notes</a></h3>
-<hr> -->
+<h3><a href="https://github.com/codenvibes/alx-backend-python/blob/master/0x03-Unittests_and_integration_tests/notes/notes.md">Notes</a></h3>
+<hr>
 
 
 <!--==================================================-->
