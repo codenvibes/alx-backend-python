@@ -12,6 +12,7 @@ from typing import Dict
 from unittest import TestCase, mock
 from unittest.mock import patch, Mock, MagicMock, PropertyMock
 
+
 class TestGithubOrgClient(TestCase):
     """
     Test case for GithubOrgClient class methods.
@@ -129,6 +130,7 @@ class TestGithubOrgClient(TestCase):
         gh_org_client = GithubOrgClient("google")
         client_has_licence = gh_org_client.has_license(repo, key)
         self.assertEqual(client_has_licence, expected)
+
 
 @parameterized_class([
     {
